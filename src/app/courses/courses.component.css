@@ -97,21 +97,21 @@ div.middlepannel {
     height: 270px;
     width: 95%;
     box-shadow: rgb(71, 70, 73) 2px 3px 3px 2px, 2px 3px 3px 2px;
-    /* background-image: url(""); */
+    background-image: url("\src\assets\images\img1.png");
     background-size: cover;
     animation: slider 12s infinite linear;
   }
-  /* @keyframes slider {
+  @keyframes slider {
     33% {
-      background-image: url("./assets/images/img2.png");
+      background-image: url("\src\assets\images\img2.png");
     }
     66% {
-      background-image: url("./assets/images/img3.png");
+      background-image: url("\src\assets\images\img3.png");
     }
     100% {
-      background-image: url("./assets/images/img1.png");
+      background-image: url("\src\assets\images\img1.png");
     }
-  } */
+  }
   div.bannertext {
     position: relative;
     top: 70px;
