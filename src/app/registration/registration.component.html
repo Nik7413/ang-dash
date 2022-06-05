@@ -1,0 +1,76 @@
+<div class="hero">
+    <div class="form-box">
+        <div class=message>{{message}}</div>
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" (click)="login()">
+          Log In
+        </button>
+        <button type="button" class="toggle-btn" (click)="register()">
+          Register
+        </button>
+      </div>
+      
+      <form (ngSubmit)="loginstudent()" id="login"   class="input-group" >
+        <input
+          type="email"
+          class="input-field"
+          name="emailid"
+          placeholder="Email Id"
+          required
+          [(ngModel)]="student.emailid"
+        />
+        <input
+          type="password"
+          class="input-field"
+          name="password"
+          placeholder="Enter Password"
+          required
+          [(ngModel)]="student.password"
+        />
+        <div id="forgot">
+        <a href="" id="aforgot">Forgot Password?</a></div>
+        <button type="submit" class="submit-btn">Log in</button>
+      </form>
+      <form id="register" class="input-group" (ngSubmit)="registerstudent()">
+        <input type="text" class="input-field" name="name" placeholder="Name" required  [(ngModel)]="student.name"/>
+        <input
+          type="text"
+          class="input-field" 
+          name="mobilenumber"
+          placeholder="Mobile Number"
+          required
+          [(ngModel)]="student.mobilenumber"
+        />
+        <input
+          type="email"
+          class="input-field" 
+          name="emailid"
+          placeholder="Email Id"
+          required
+          [(ngModel)]="student.emailid"
+        />
+        <input
+          type="password"
+          class="input-field"
+          name="password" 
+          placeholder="Enter Password"
+          required
+          [(ngModel)]="student.password"
+        />
+        <input
+          type="password"
+          class="input-field" 
+          name="confirmpassword"
+          placeholder="Confirm Password"
+          required
+          [(ngModel)]="student.confirmpassword"
+        />
+        <input type="checkbox" class="chech-box" required /><span
+          >I agree to the terms & conditions</span
+        >
+        
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+  </div>

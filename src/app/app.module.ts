@@ -6,6 +6,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AssesmentComponent } from './assesment/assesment.component';
 import { SettingsComponent } from './settings/settings.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -13,11 +16,14 @@ import { SettingsComponent } from './settings/settings.component';
     DashboardComponent,
     CoursesComponent,
     AssesmentComponent,
-    SettingsComponent
+    SettingsComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-<div id="leftpannel" class="leftpannel">
+<div *ngIf="show" id="leftpannel" class="leftpannel">
   <img
     (click)="hamburger()"
     src="./assets/images/virat.jpg"
@@ -53,13 +53,13 @@
     >SETTINGS</a
   >
   <img
-    src="./assets/images/light.png"
+    src="./assets/images/logout.png"
     alt=""
     class="leftpannellogo"
     id="logomode"
   />
   <a href="https://google.com" class="leftpannelelement" id="mode"
-    >LIGHT/DARK</a
+    >LOGOUT</a
   >
 </div>
 <router-outlet></router-outlet>

@@ -2,7 +2,7 @@ div.leftpannel {
     position: absolute;
     display: flex;
     flex-direction: column;
-    height: 1000px;
+    height:900px;
     width: 5%;
     background-color: rgb(12, 131, 228);
     overflow: hidden;
