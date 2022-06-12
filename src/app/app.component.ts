@@ -9,11 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Project';
   show: boolean = false;
+  uloggedIn : boolean = false;
 
   ngOnInit(): void {
     setTimeout (() => {
       this.show = true;
-       }, 5000);
+       }, 100);
   }
 
   hamburger() {

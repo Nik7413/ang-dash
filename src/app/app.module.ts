@@ -8,7 +8,8 @@ import { AssesmentComponent } from './assesment/assesment.component';
 import { SettingsComponent } from './settings/settings.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { QuestionComponent } from './question/question.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http'
     CoursesComponent,
     AssesmentComponent,
     SettingsComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

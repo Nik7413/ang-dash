@@ -17,7 +17,6 @@
           class="input-field"
           name="emailid"
           placeholder="Email Id"
-          required
           [(ngModel)]="student.emailid"
         />
         <input
@@ -25,52 +24,47 @@
           class="input-field"
           name="password"
           placeholder="Enter Password"
-          required
           [(ngModel)]="student.password"
         />
-        <div id="forgot">
-        <a href="" id="aforgot">Forgot Password?</a></div>
         <button type="submit" class="submit-btn">Log in</button>
       </form>
       <form id="register" class="input-group" (ngSubmit)="registerstudent()">
-        <input type="text" class="input-field" name="name" placeholder="Name" required  [(ngModel)]="student.name"/>
+        <input type="text" class="input-field" name="name" placeholder="Name" [(ngModel)]="student.name" (keyup)="compared()"/>
         <input
           type="text"
           class="input-field" 
           name="mobilenumber"
           placeholder="Mobile Number"
-          required
           [(ngModel)]="student.mobilenumber"
+          (keyup)="compared()"
         />
         <input
           type="email"
           class="input-field" 
           name="emailid"
           placeholder="Email Id"
-          required
           [(ngModel)]="student.emailid"
+          (keyup)="compared()"
         />
         <input
-          type="password"
+          type="text"
           class="input-field"
           name="password" 
           placeholder="Enter Password"
-          required
           [(ngModel)]="student.password"
+          (blur)="check()"
+          (keyup)="compared()"
         />
         <input
-          type="password"
+          type="text"
           class="input-field" 
           name="confirmpassword"
           placeholder="Confirm Password"
-          required
-          [(ngModel)]="student.confirmpassword"
+          [(ngModel)]='compare'
+          (keyup)="compared()"
         />
-        <input type="checkbox" class="chech-box" required /><span
-          >I agree to the terms & conditions</span
-        >
         
-        <button type="submit" class="submit-btn">Register</button>
+        <button type="submit" class="submit-btn" [disabled]="state">Register</button>
       </form>
     </div>
   </div>

@@ -1,5 +1,5 @@
 div.leftpannel {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     height:900px;

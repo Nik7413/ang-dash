@@ -3,5 +3,4 @@ export class Student {
     mobilenumber!: number;
     emailid!: string;
     password!: string;
-    confirmpassword!: string
 }
