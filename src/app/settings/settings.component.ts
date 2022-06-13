@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RegistrationService } from '../registration.service';
 
 @Component({
   selector: 'app-settings',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private registrationservice: RegistrationService, private router: Router) { }
 
   ngOnInit(): void {
+    if (!this.registrationservice.session) {
+      this.router.navigate(['/registration'])
+    }
   }
 
 }

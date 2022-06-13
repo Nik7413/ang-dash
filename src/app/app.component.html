@@ -52,13 +52,13 @@
   <a [routerLink]="['/settings']" class="leftpannelelement" id="settings"
     >SETTINGS</a
   >
-  <img
+  <a [routerLink]="['/registration']" (click)="logout()" ><img
     src="./assets/images/logout.png"
     alt=""
     class="leftpannellogo"
     id="logomode"
-  />
-  <a href="https://google.com" class="leftpannelelement" id="mode"
+  /></a>
+  <a [routerLink]="['/registration']" (click)="logout()" class="leftpannelelement" id="mode"
     >LOGOUT</a
   >
 </div>

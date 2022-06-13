@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { RegistrationService } from './registration.service';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +11,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Project';
   show: boolean = false;
-  uloggedIn : boolean = false;
+  uloggedIn: boolean = false;
+  constructor(private registrationservice: RegistrationService, private router: Router) { }
+
 
   ngOnInit(): void {
-    setTimeout (() => {
+    setTimeout(() => {
       this.show = true;
-       }, 100);
+    }, 100);
+
+
+  }
+
+  logout() {
+    this.registrationservice.session = false;
   }
 
   hamburger() {
