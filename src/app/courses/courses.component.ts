@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RegistrationService } from '../registration.service';
 
 @Component({
   selector: 'app-courses',
@@ -8,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 
 export class CoursesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private registrationservice: RegistrationService, private router: Router) { }
 
   ngOnInit(): void {
+    if (!this.registrationservice.session) {
+      this.router.navigate(['/registration'])
+    }
   }
 
 }

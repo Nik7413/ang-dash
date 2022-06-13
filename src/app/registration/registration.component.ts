@@ -16,13 +16,14 @@ export class RegistrationComponent implements OnInit {
   email: String = "";
   mobile: Number = 0;
   password: String = "";
-  state: Boolean =  true;
+  state: Boolean = true;
   compare: String = "";
   checked: Boolean = false;
   @Output() logemit = new EventEmitter();
   @Input()
   loggedIn!: Boolean;
   log: Boolean = true;
+
   constructor(private registrationservice: RegistrationService, private router: Router) { }
 
   ngOnInit(): void {
@@ -30,9 +31,15 @@ export class RegistrationComponent implements OnInit {
 
   loginstudent() {
     this.registrationservice.studentlogin(this.student).subscribe(data => {
-      alert("Login Success");
-      this.loggedIn = true;
-      this.router.navigate(['/dashboard']);
+      if (this.student.emailid != null && this.student.password != null) {
+
+        alert("Login Success");
+        this.registrationservice.session = true;
+        this.router.navigate(['/dashboard']);
+      }
+      else {
+        this.message = "Please fill the fields !"
+      }
     }, error => this.message = "Invalid Login");
 
   }
@@ -69,27 +76,27 @@ export class RegistrationComponent implements OnInit {
     z.style.left = "0";
 
   }
-  compared(){
-    if(this.checked==true){
-    if(this.student.password == this.compare && this.student.name != null && this.student.emailid != null && this.student.mobilenumber != null){
-      this.state = false;
-    }
-    else{
-      this.state = true;
+  compared() {
+    if (this.checked == true) {
+      if (this.student.password == this.compare && this.student.name != null && this.student.emailid != null && this.student.mobilenumber != null) {
+        this.state = false;
+      }
+      else {
+        this.state = true;
+      }
     }
   }
-  }
-  check(){
+  check() {
     var uppercase = /[A-Z]/g;
     var lowercase = /[a-z]/g;
     var specialchar = /[!-*,@]/g;
     var numbers = /[0-9]/g;
-    if(this.student.password.match(uppercase) && this.student.password.match(lowercase) && this.student.password.match(numbers) && this.student.password.match(specialchar) && this.student.password.length>=8){
-      this.checked=true;
+    if (this.student.password.match(uppercase) && this.student.password.match(lowercase) && this.student.password.match(numbers) && this.student.password.match(specialchar) && this.student.password.length >= 8) {
+      this.checked = true;
     }
-    else{
+    else {
       alert("Password should contain: \n Uppercase\n Lowercase \n Special Character(!,@,#,$,%,^,&,*)\n Numbers(0-9)\n Minimun Length of password should be 8")
-      this.checked=false;
+      this.checked = false;
 
     }
 

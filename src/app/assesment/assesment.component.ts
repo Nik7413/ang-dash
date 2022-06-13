@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RegistrationService } from '../registration.service';
 import { SharedService } from '../shared.service';
 
 @Component({
@@ -8,13 +10,16 @@ import { SharedService } from '../shared.service';
 })
 export class AssesmentComponent implements OnInit {
 
-  constructor(private shared: SharedService) { }
+  constructor(private shared: SharedService, private registrationservice: RegistrationService, private router: Router) { }
 
 
   ngOnInit(): void {
+    if (!this.registrationservice.session) {
+      this.router.navigate(['/registration'])
+    }
   }
 
-  physics(){
+  physics() {
     this.shared.physhow = true;
     this.shared.cheshow = false;
     this.shared.mathshow = false;
@@ -23,7 +28,7 @@ export class AssesmentComponent implements OnInit {
     this.shared.htmlshow = false;
     this.shared.cssshow = false;
   }
-  chemistry(){
+  chemistry() {
     this.shared.physhow = false;
     this.shared.cheshow = true;
     this.shared.mathshow = false;
@@ -32,7 +37,7 @@ export class AssesmentComponent implements OnInit {
     this.shared.htmlshow = false;
     this.shared.cssshow = false;
   }
-  maths(){
+  maths() {
     this.shared.physhow = false;
     this.shared.cheshow = false;
     this.shared.mathshow = true;
@@ -41,7 +46,7 @@ export class AssesmentComponent implements OnInit {
     this.shared.htmlshow = false;
     this.shared.cssshow = false;
   }
-  java(){
+  java() {
     this.shared.physhow = false;
     this.shared.cheshow = false;
     this.shared.mathshow = false;
@@ -50,7 +55,7 @@ export class AssesmentComponent implements OnInit {
     this.shared.htmlshow = false;
     this.shared.cssshow = false;
   }
-  javascript(){
+  javascript() {
     this.shared.physhow = false;
     this.shared.cheshow = false;
     this.shared.mathshow = false;
@@ -59,7 +64,7 @@ export class AssesmentComponent implements OnInit {
     this.shared.htmlshow = false;
     this.shared.cssshow = false;
   }
-  html(){
+  html() {
     this.shared.physhow = false;
     this.shared.cheshow = false;
     this.shared.mathshow = false;
@@ -68,7 +73,7 @@ export class AssesmentComponent implements OnInit {
     this.shared.htmlshow = true;
     this.shared.cssshow = false;
   }
-  css(){
+  css() {
     this.shared.physhow = false;
     this.shared.cheshow = false;
     this.shared.mathshow = false;
