@@ -27,6 +27,10 @@ export class AssesmentComponent implements OnInit {
     this.shared.jsshow = false;
     this.shared.htmlshow = false;
     this.shared.cssshow = false;
+    if (this.shared.p == 0) {
+      this.registrationservice.score = this.registrationservice.score + 14.28;
+      this.shared.p = this.shared.p + 1;
+    }
   }
   chemistry() {
     this.shared.physhow = false;
@@ -36,6 +40,11 @@ export class AssesmentComponent implements OnInit {
     this.shared.jsshow = false;
     this.shared.htmlshow = false;
     this.shared.cssshow = false;
+    if (this.shared.c == 0) {
+      this.registrationservice.score = this.registrationservice.score + 14.28;
+      this.shared.c = this.shared.c + 1;
+    }
+
   }
   maths() {
     this.shared.physhow = false;
@@ -45,6 +54,12 @@ export class AssesmentComponent implements OnInit {
     this.shared.jsshow = false;
     this.shared.htmlshow = false;
     this.shared.cssshow = false;
+
+    if (this.shared.m < 1) {
+      this.registrationservice.score = this.registrationservice.score + 14.28;
+      this.shared.m = this.shared.m + 1;
+    }
+
   }
   java() {
     this.shared.physhow = false;
@@ -54,6 +69,11 @@ export class AssesmentComponent implements OnInit {
     this.shared.jsshow = false;
     this.shared.htmlshow = false;
     this.shared.cssshow = false;
+
+    if (this.shared.j < 1) {
+      this.registrationservice.score = this.registrationservice.score + 14.28;
+      this.shared.j = this.shared.j + 1;
+    }
   }
   javascript() {
     this.shared.physhow = false;
@@ -63,6 +83,11 @@ export class AssesmentComponent implements OnInit {
     this.shared.jsshow = true;
     this.shared.htmlshow = false;
     this.shared.cssshow = false;
+    if (this.shared.js < 1) {
+      this.registrationservice.score = this.registrationservice.score + 14.28;
+      this.shared.js = this.shared.js + 1;
+    }
+
   }
   html() {
     this.shared.physhow = false;
@@ -72,6 +97,11 @@ export class AssesmentComponent implements OnInit {
     this.shared.jsshow = false;
     this.shared.htmlshow = true;
     this.shared.cssshow = false;
+    if (this.shared.h < 1) {
+      this.registrationservice.score = this.registrationservice.score + 14.28;
+      this.shared.js = this.shared.js + 1;
+    }
+
   }
   css() {
     this.shared.physhow = false;
@@ -81,5 +111,10 @@ export class AssesmentComponent implements OnInit {
     this.shared.jsshow = false;
     this.shared.htmlshow = false;
     this.shared.cssshow = true;
+    if (this.shared.cs < 1) {
+      this.registrationservice.score = this.registrationservice.score + 14.28;
+      this.shared.cs = this.shared.cs + 1;
+    }
+
   }
 }

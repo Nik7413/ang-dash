@@ -16,5 +16,9 @@ export class SettingsComponent implements OnInit {
       this.router.navigate(['/registration'])
     }
   }
+  Score() {
+    console.log("hello");
+    console.log(this.registrationservice.score);
+  }
 
 }

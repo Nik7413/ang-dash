@@ -11,6 +11,7 @@ export class RegistrationService {
   baseUrl2 = "http://localhost:8095/login"
   constructor(private HttpClient: HttpClient) { }
   session: boolean = false;
+  score: number = 0;
   studentregister(student: Student): Observable<object> {
     return this.HttpClient.post(`${this.baseUrl}`, student)
   }
