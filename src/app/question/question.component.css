@@ -47,3 +47,6 @@ div.showAns {
   font-weight: bold;
   cursor: pointer;
 } 
+div.right{
+  background-color: rgb(56, 218, 91);
+}

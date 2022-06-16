@@ -18,7 +18,7 @@ export class QuestionComponent implements OnInit {
   jsshow: boolean = this.shared.jsshow;
   htmlshow: boolean = this.shared.htmlshow;
   cssshow: boolean = this.shared.cssshow;
-
+  showans: boolean = false;
   ngOnInit(): void {
     if (!this.registrationservice.session) {
       this.router.navigate(['/registration'])
@@ -28,7 +28,9 @@ export class QuestionComponent implements OnInit {
 
 
 
-
+  showanswer() {
+    this.showans = true;
+  }
   phyQuestion = [
     { id: '1', question: '1.[ML^-1T^-2] is the dimensional formula of', optionA: '(A) force', optionB: '(B) coefficient of friction', optionC: '(C) modulus of elasticity', optionD: '(D) energy', key: "C" },
     { id: '2', question: '2. The dimensional formula of coefficient of viscosity is', optionA: '(A) [MLT^-1]', optionB: '(B) [M^-1L^2T^-2]', optionC: '(C) [ML^-1 T^-1]', optionD: '(D) none of these', key: "C" },
