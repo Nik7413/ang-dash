@@ -10,7 +10,7 @@ div.box
     margin: 20px 0px;
     /* height: 300px; */
     width: 50%;
-    background-color: red;
+    background-color: rgb(233, 233, 233);
     position: relative;
     left: 25%;
     border: 2px solid grey;
@@ -25,7 +25,8 @@ div.box
     border-radius: 10px;
   }
   div.option {
-    background-color: rgb(23, 162, 183);
+    border: 1px solid rgb(117, 109, 109);
+    background-color: #fff;
     position: relative;
     margin: 20px;
     padding: 10px;
