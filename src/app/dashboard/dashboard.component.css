@@ -1,8 +1,12 @@
-div.banner {
-    position: absolute;
-    left: 5%;
+div#banner{
+  position: absolute;
+  left: 5%;
+  width: 95%;
+}
+
+div.bannertop {
+    position: relative;
     height: 270px;
-    width: 95%;
     box-shadow: rgb(71, 70, 73) 2px 3px 3px 2px, 2px 3px 3px 2px;
     background-image: url("\src\assets\images\img1.png");
     background-size: cover;
@@ -62,3 +66,48 @@ div.banner {
     background-color: white;
     box-shadow: rgb(80, 5, 229) 2px 3px 3px 2px, 2px 3px 3px 2px;
   }
+
+
+  /* for progrss bar */
+.mainbox{
+  display:flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.container{
+    margin: 10px;
+    border: 1px solid steelblue;
+    width: 40%;
+    padding-left: 500px;
+    /* margin: 300px auto; */
+    position: relative;
+    top: 50px;
+    left: 1%;
+    
+    overflow: auto;
+    min-height: 60px;
+    padding: 30px;
+    border-radius: 5px;
+}
+.para{
+    font-size: 30px;
+}
+.line{
+    background-color: rgb(121, 118, 118);
+}
+.comp{
+    max-width: 100%;
+    min-height: 15px;
+    background-color: rgb(186, 189, 194);
+    border-radius: 15px;
+}
+
+.prog{
+    
+    min-height: 15px;
+    background-color: rgb(12, 131, 228);
+    border-radius: 15px;
+}
+.percentage{
+    margin-left: 93%;
+} 

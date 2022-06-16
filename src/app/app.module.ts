@@ -9,7 +9,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { QuestionComponent } from './question/question.component'
+import { QuestionComponent } from './question/question.component';
+import { ContentComponent } from './content/content.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { QuestionComponent } from './question/question.component'
     AssesmentComponent,
     SettingsComponent,
     RegistrationComponent,
-    QuestionComponent
+    QuestionComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

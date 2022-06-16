@@ -9,8 +9,11 @@ import { RegistrationService } from '../registration.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private registrationservice: RegistrationService, private router: Router) { }
 
+
+  constructor(private registrationservice: RegistrationService, private router: Router) { }
+  per: number = this.registrationservice.score;
+  cper: number = this.registrationservice.cscore;
   ngOnInit(): void {
     if (!this.registrationservice.session) {
       this.router.navigate(['/registration'])
